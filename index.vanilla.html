@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WorkPulse | Social Media & Client Work Performance</title>
+<style>
+:root{--bg:#f4f7fb;--panel:#fff;--ink:#172033;--muted:#667085;--line:#e5eaf2;--navy:#172554;--blue:#3157d5;--teal:#0f9d8a;--orange:#e58b32;--red:#d84d5b;--purple:#7756c8;--shadow:0 8px 26px rgba(24,39,75,.06)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0;border-radius:9px;padding:10px 13px;font-weight:650}.app{display:grid;grid-template-columns:235px minmax(0,1fr);min-height:100vh}.sidebar{background:#111b35;color:#d9e1f5;padding:24px 16px;display:flex;flex-direction:column;gap:24px}.brand{display:flex;align-items:center;gap:11px;padding:0 8px}.logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#6b8aff,#35c5b4);display:grid;place-items:center;color:#fff;font-weight:900;font-size:18px}.brand strong{display:block;color:white;font-size:15px}.brand small{color:#aab6d2}.nav{display:grid;gap:6px}.nav button{background:transparent;color:#c4cde2;text-align:left;display:flex;gap:11px;align-items:center;padding:11px 12px}.nav button.active,.nav button:hover{background:#263556;color:white}.nav .ico{width:20px;text-align:center}.side-note{margin-top:auto;border:1px solid #344260;border-radius:13px;padding:14px;color:#bac5df;font-size:12px}.side-note b{color:white;display:block;margin-bottom:5px}.main{min-width:0;padding:26px clamp(16px,3vw,36px) 40px}.topbar{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:25px}.eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);font-weight:800}.topbar h1{font-size:clamp(23px,3vw,31px);margin:4px 0 3px;letter-spacing:-.035em}.muted{color:var(--muted)}.actions{display:flex;gap:8px;flex-wrap:wrap}.btn-primary{background:var(--blue);color:white}.btn-light{background:white;border:1px solid var(--line);color:#26324a}.btn-dark{background:#202d4c;color:#fff}.filters{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:18px}.field{display:flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:7px 10px}.field label{font-size:12px;color:var(--muted)}.field input,.field select{border:0;outline:0;background:transparent;color:var(--ink);max-width:180px}.section{display:none}.section.active{display:block}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:24px 0 13px}.section-head h2{margin:0;font-size:18px;letter-spacing:-.02em}.section-head p{margin:3px 0 0;color:var(--muted);font-size:12px}.grid{display:grid;gap:15px}.kpis{grid-template-columns:repeat(4,minmax(0,1fr))}.card{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:18px;box-shadow:var(--shadow);min-width:0}.kpi-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px;font-weight:650}.kpi-icon{height:34px;width:34px;border-radius:10px;display:grid;place-items:center;font-size:16px;background:#edf1ff;color:var(--blue)}.kpi-value{font-size:28px;letter-spacing:-.04em;font-weight:800;margin:13px 0 4px}.kpi-foot{font-size:11px;color:var(--muted)}.kpi-foot strong{color:var(--teal)}.two-col{grid-template-columns:minmax(0,1.35fr) minmax(260px,.85fr)}.three-col{grid-template-columns:repeat(3,minmax(0,1fr))}.bar-row{display:grid;grid-template-columns:115px 1fr 40px;gap:10px;align-items:center;margin:14px 0;font-size:12px}.track{height:8px;background:#edf0f6;border-radius:20px;overflow:hidden}.fill{height:100%;border-radius:20px;background:var(--blue)}.legend{display:flex;gap:13px;flex-wrap:wrap;color:var(--muted);font-size:11px;margin-top:14px}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}.mini-stat{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid var(--line)}.mini-stat:last-child{border-bottom:0}.mini-stat span{color:var(--muted)}.mini-stat b{font-variant-numeric:tabular-nums}.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:13px;background:white}.data-table{border-collapse:collapse;width:100%;min-width:800px}.data-table th,.data-table td{padding:11px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}.data-table th{font-size:10px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);background:#fafbfe;white-space:nowrap}.data-table td{font-size:12px}.data-table tr:last-child td{border-bottom:0}.data-table input,.data-table select,.data-table textarea{width:100%;min-width:85px;border:1px solid #e0e5ee;border-radius:7px;padding:7px;background:white;color:var(--ink)}.data-table textarea{min-width:150px;resize:vertical}.pill{display:inline-flex;align-items:center;padding:4px 8px;border-radius:20px;font-size:10px;font-weight:750;background:#edf1ff;color:#3157d5;white-space:nowrap}.pill.done{background:#e3f7ef;color:#087c61}.pill.progress{background:#fff3dd;color:#996016}.pill.blocked{background:#ffeaec;color:#b22f42}.brand-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.brand-card{position:relative;overflow:hidden}.brand-card:before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:var(--brand-color,var(--blue))}.brand-card h3{margin:3px 0 6px;font-size:14px}.brand-card .big{font-size:24px;font-weight:800;letter-spacing:-.03em}.brand-card small{color:var(--muted)}.brand-card .brand-meta{display:flex;justify-content:space-between;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}.progress-ring{height:8px;border-radius:10px;background:#eef1f6;margin-top:10px;overflow:hidden}.progress-ring span{display:block;height:100%;background:var(--brand-color,var(--blue));border-radius:10px}.form-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.form-control{display:grid;gap:5px}.form-control label{font-size:11px;color:var(--muted);font-weight:700}.form-control input,.form-control select,.form-control textarea{width:100%;border:1px solid var(--line);border-radius:9px;padding:10px;background:#fff;min-width:0}.form-control.wide{grid-column:span 2}.form-control textarea{min-height:40px;resize:vertical}.form-actions{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}.empty{padding:28px;text-align:center;color:var(--muted)}.report-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.report-card h3{margin:0 0 5px;font-size:14px}.report-card p{color:var(--muted);font-size:12px;margin:0 0 15px}.report-card .report-num{font-size:25px;font-weight:800}.report-list{padding-left:18px;color:var(--muted);font-size:12px}.report-list li{margin:7px 0}.hint{font-size:11px;color:var(--muted);margin-top:10px}.footer{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:24px;color:var(--muted);font-size:11px}.toast{position:fixed;right:20px;bottom:20px;background:#172554;color:#fff;padding:12px 16px;border-radius:10px;box-shadow:var(--shadow);display:none;z-index:20}.toast.show{display:block}.mobile-menu{display:none}
+@media(max-width:1100px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.brand-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.form-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.app{grid-template-columns:1fr}.sidebar{padding:12px;gap:10px}.brand{padding:2px 4px}.nav{display:flex;overflow:auto}.nav button{white-space:nowrap;padding:9px}.side-note{display:none}.main{padding:18px 13px 30px}.topbar{align-items:flex-start;flex-direction:column}.two-col,.three-col,.report-grid{grid-template-columns:1fr}.kpis{gap:9px}.card{padding:14px}.kpi-value{font-size:24px}.form-control.wide{grid-column:span 2}.filters .field{flex:1}.filters .field input,.filters .field select{max-width:none;width:100%}}
+@media print{.sidebar,.actions,.filters,.form-actions,.delete-btn,.footer .no-print{display:none!important}.app{display:block}.main{padding:0}.section{display:block!important;page-break-inside:avoid}.card{box-shadow:none;break-inside:avoid}.table-wrap{overflow:visible}.data-table{min-width:0}.data-table th,.data-table td{padding:6px;font-size:9px}body{background:#fff}.topbar{margin-bottom:10px}}
+
+.planner-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.8fr);gap:15px}
+.calendar-list{display:grid;gap:10px}.calendar-item{border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:10px;padding:12px;display:grid;grid-template-columns:100px minmax(0,1fr) auto;gap:12px;align-items:center;background:#fff}
+.calendar-item h4{margin:0 0 4px;font-size:13px}.calendar-item p{margin:0;color:var(--muted);font-size:11px}.calendar-meta{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}
+.badge-soft{display:inline-flex;padding:3px 7px;border-radius:20px;background:#eef2ff;color:#3949ab;font-size:10px;font-weight:750}
+.planner-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.planner-form .wide{grid-column:span 2}
+.planner-form label{font-size:11px;color:var(--muted);font-weight:700}.planner-form input,.planner-form select,.planner-form textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:9px;background:#fff;min-width:0}.planner-form textarea{min-height:76px;resize:vertical}
+.week-strip{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px}.week-day{border:1px solid var(--line);background:#fff;border-radius:9px;padding:9px 4px;text-align:center;font-size:11px}.week-day strong{display:block;font-size:15px}.week-day.today{border-color:var(--blue);background:#eef2ff}
+.checklist{display:grid;gap:9px}.checklist label{display:flex;gap:8px;align-items:flex-start;font-size:12px}.checklist input{margin-top:3px}
+@media(max-width:900px){.planner-grid{grid-template-columns:1fr}.calendar-item{grid-template-columns:1fr}.week-strip{grid-template-columns:repeat(4,minmax(0,1fr))}}
+
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="logo">WP</div><div><strong>WorkPulse</strong><small>Social & client operations</small></div></div>
+  <nav class="nav" aria-label="Main navigation">
+    <button class="active" data-target="overview"><span class="ico">▦</span> Overview</button>
+    <button data-target="tasks"><span class="ico">☑</span> Daily tasks</button>
+    <button data-target="clients"><span class="ico">◈</span> Client portfolio</button>
+    <button data-target="projects"><span class="ico">▤</span> Projects & deliverables</button>
+    <button data-target="planner"><span class="ico">▦</span> Content planner</button>
+    <button data-target="reports"><span class="ico">▥</span> Reports & KPIs</button>
+    <button data-target="settings"><span class="ico">⚙</span> Settings & data</button>
+  </nav>
+  <div class="side-note"><b>WORKING HOURS</b>11:00 AM – 5:00 PM<br>Break: 1:30–2:30 PM<br>5 productive hours planned<br><br><b>Track outcomes, not just activity.</b>Record tasks by client, channel, output and measurable result.</div>
+</aside>
+<main class="main">
+  <header class="topbar">
+    <div><div class="eyebrow">Personal performance hub</div><h1>Work performance dashboard</h1><div class="muted">Social media, recruiting & client deliverables</div></div>
+    <div class="actions"><button class="btn-light" id="exportCsv">Export tasks CSV</button><button class="btn-light" id="printBtn">Print report</button><button class="btn-primary" id="addTaskTop">＋ Add task</button></div>
+  </header>
+  <div class="filters">
+    <div class="field"><label for="periodDate">Date</label><input type="date" id="periodDate"></div>
+    <div class="field"><label for="periodMode">View</label><select id="periodMode"><option value="daily">Daily</option><option value="weekly">Weekly</option><option value="monthly">Monthly</option></select></div>
+    <div class="field"><label for="brandFilter">Brand</label><select id="brandFilter"><option value="All">All brands</option><option>Time Global Tech</option><option>Legal Tech Pakistan</option><option>MoneyMinds Technologies Inc.</option><option>Orgpyur Technologies Inc.</option></select></div>
+    <button class="btn-light" id="resetFilters">Reset filters</button>
+  </div>
+
+  <section id="overview" class="section active">
+    <div class="grid kpis">
+      <article class="card"><div class="kpi-top">Tasks completed <span class="kpi-icon">✓</span></div><div class="kpi-value" id="kpiCompleted">0/0</div><div class="kpi-foot" id="kpiCompletionFoot">Completion rate: 0%</div></article>
+      <article class="card"><div class="kpi-top">Hours logged <span class="kpi-icon">◷</span></div><div class="kpi-value" id="kpiHours">0.0h</div><div class="kpi-foot">Planned: <strong id="kpiPlanned">6.0h/day</strong></div></article>
+      <article class="card"><div class="kpi-top">Content published <span class="kpi-icon">▣</span></div><div class="kpi-value" id="kpiPublished">0</div><div class="kpi-foot">Published deliverables in selected period</div></article>
+      <article class="card"><div class="kpi-top">Ad spend logged <span class="kpi-icon">↗</span></div><div class="kpi-value" id="kpiSpend">PKR 0</div><div class="kpi-foot">Enter spend in task records or campaign notes</div></article>
+    </div>
+    <div class="section-head"><div><h2>Performance snapshot</h2><p>Calculated from your saved task and deliverable entries.</p></div></div>
+    <div class="grid two-col">
+      <article class="card"><div class="section-head" style="margin:0 0 12px"><div><h2>Tasks by client</h2><p>Completion share for the selected period</p></div></div><div id="brandBars"></div><div class="legend"><span><i class="dot" style="background:#3157d5"></i>Completed</span><span><i class="dot" style="background:#e8edf5"></i>Remaining</span></div></article>
+      <article class="card"><div class="section-head" style="margin:0 0 12px"><div><h2>Daily time allocation</h2><p>Hours recorded against your 5-hour productive workday after the scheduled break</p></div></div><div id="timeBreakdown"></div><div class="hint">Tip: Enter estimated hours and actual hours on each task to compare planned vs. actual time.</div></article>
+    </div>
+    <div class="section-head"><div><h2>Client portfolio at a glance</h2><p>Activity summary for the current filters.</p></div><button class="btn-light" data-goto="clients">View portfolio →</button></div>
+    <div id="brandCards" class="grid brand-grid"></div>
+    <div class="section-head"><div><h2>Priority task list</h2><p>Open tasks with the nearest due dates.</p></div><button class="btn-light" data-goto="tasks">Manage tasks →</button></div>
+    <div class="table-wrap"><table class="data-table"><thead><tr><th>Task</th><th>Brand</th><th>Due</th><th>Priority</th><th>Status</th><th>Hours</th></tr></thead><tbody id="priorityTable"></tbody></table></div>
+  </section>
+
+  <section id="tasks" class="section">
+    <div class="section-head"><div><h2>Daily operational workflow</h2><p>Track social content, publishing, articles, recruitment, comment engagement, reporting and TGT-only case studies.</p></div></div>
+    <article class="card">
+      <h3 style="margin:0 0 14px">Add a task / deliverable</h3>
+      <form id="taskForm">
+        <div class="form-grid">
+          <div class="form-control wide"><label for="taskTitle">Task title *</label><input id="taskTitle" required placeholder="e.g., Create LinkedIn carousel"></div>
+          <div class="form-control"><label for="taskBrand">Brand / client *</label><select id="taskBrand" required><option>Time Global Tech</option><option>Legal Tech Pakistan</option><option>MoneyMinds Technologies Inc.</option><option>Orgpyur Technologies Inc.</option></select></div>
+          <div class="form-control"><label for="taskPlatform">Platform / channel</label><select id="taskPlatform"><option>LinkedIn — shared account</option><option>Instagram</option><option>Facebook</option><option>Pinterest</option><option>YouTube</option><option>X</option><option>TikTok</option><option>Threads</option><option>Website</option><option>Internal / offline</option><option>Other</option></select></div>
+          <div class="form-control"><label for="taskCategory">Work category</label><select id="taskCategory"><option>Research & strategy</option><option>LinkedIn content creation</option><option>LinkedIn post scheduling & publishing</option><option>LinkedIn article writing</option><option>LinkedIn job posting</option><option>Candidate screening & recruitment support</option><option>LinkedIn comment engagement</option><option>Content creation & design</option><option>Publishing & scheduling</option><option>Paid media management</option><option>Client account management</option><option>Case study / company profile (TGT only)</option><option>Reporting & analytics</option><option>Meeting / admin</option><option>Other</option></select></div>
+          <div class="form-control"><label for="taskDate">Work date *</label><input id="taskDate" type="date" required></div>
+          <div class="form-control"><label for="taskDue">Due date</label><input id="taskDue" type="date"></div>
+          <div class="form-control"><label for="taskPriority">Priority</label><select id="taskPriority"><option>Medium</option><option>High</option><option>Low</option><option>Urgent</option></select></div>
+          <div class="form-control"><label for="taskStatus">Status</label><select id="taskStatus"><option>Not started</option><option>In progress</option><option>Completed</option><option>Blocked</option></select></div>
+          <div class="form-control"><label for="taskStart">Start time</label><input id="taskStart" type="time" min="11:00" max="17:00" value="11:00"></div>
+          <div class="form-control"><label for="taskEnd">End time</label><input id="taskEnd" type="time" min="11:00" max="17:00" value="12:00"></div>
+          <div class="form-control"><label for="taskEstimate">Estimated hours</label><input id="taskEstimate" type="number" min="0" max="6" step=".25" value="1"></div>
+          <div class="form-control"><label for="taskActual">Actual hours</label><input id="taskActual" type="number" min="0" max="24" step=".25" value="0"></div>
+          <div class="form-control"><label for="taskOutput">Output count</label><input id="taskOutput" type="number" min="0" step="1" value="0" title="Posts, graphics, reports, or other deliverables"></div>
+          <div class="form-control"><label for="taskSpend">Ad spend (PKR)</label><input id="taskSpend" type="number" min="0" step="1" value="0"></div>
+          <div class="form-control wide"><label for="taskNotes">Outcome / notes</label><textarea id="taskNotes" placeholder="Result, link, KPI, blocker, next step…"></textarea></div>
+        </div>
+        <div class="form-actions"><button class="btn-primary" type="submit" id="taskSubmit">＋ Save task</button><button class="btn-light" type="reset" id="taskReset">Clear form</button><span class="hint">Your data stays in this browser on this device unless you export it.</span></div>
+      </form>
+    </article>
+    <div class="section-head"><div><h2>Task register</h2><p>Update status inline. Use Edit to load a record into the form.</p></div><button class="btn-light" id="clearCompleted">Clear completed (filtered)</button></div>
+    <div class="table-wrap"><table class="data-table"><thead><tr><th>Task / outcome</th><th>Brand</th><th>Platform</th><th>Category</th><th>Date</th><th>Due</th><th>Priority</th><th>Status</th><th>Est. h</th><th>Actual h</th><th>Output</th><th>Spend PKR</th><th>Actions</th></tr></thead><tbody id="taskTable"></tbody></table></div>
+    <div id="taskEmpty" class="empty" style="display:none">No tasks match these filters. Add your first task above.</div>
+  </section>
+
+  <section id="clients" class="section">
+    <div class="section-head"><div><h2>Multi-brand client portfolio</h2><p>Four organizations, one shared LinkedIn account for client operations.</p></div></div>
+    <div id="clientCards" class="grid brand-grid"></div>
+    <div class="section-head"><div><h2>Brand performance breakdown</h2><p>Use task records to keep this portfolio current.</p></div></div>
+    <div class="table-wrap"><table class="data-table"><thead><tr><th>Brand</th><th>Tasks</th><th>Completed</th><th>Completion %</th><th>Hours</th><th>Outputs</th><th>Ad spend</th></tr></thead><tbody id="clientTable"></tbody></table></div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="section-head"><div><h2>Projects & deliverables pipeline</h2><p>Track strategic work separately from routine social posting.</p></div></div>
+    <article class="card">
+      <h3 style="margin-top:0">Suggested project checklist</h3>
+      <div class="table-wrap"><table class="data-table"><thead><tr><th>Deliverable</th><th>Brand</th><th>Pipeline stage</th><th>Owner / reviewer</th><th>Target date</th><th>Notes</th></tr></thead><tbody id="projectTable"></tbody></table></div>
+      <div class="form-actions"><button class="btn-light" id="addProject">＋ Add pipeline item</button><button class="btn-light" id="exportProjects">Export pipeline CSV</button></div>
+      <div class="hint">Pipeline stages: Backlog → Drafting → In review → Approved → Published. These are starter rows; edit them to match actual work.</div>
+    </article>
+    <div class="section-head"><div><h2>Suggested recurring work</h2><p>Use these as reminders, then record actual work in the task register.</p></div></div>
+    <div class="grid three-col">
+      <article class="card"><h3>Daily</h3><ul class="report-list"><li>Review priority tasks and deadlines</li><li>Schedule and publish approved content</li><li>Log hours, outputs and blockers</li><li>Check campaign delivery and spend</li></ul></article>
+      <article class="card"><h3>Weekly</h3><ul class="report-list"><li>Compare post output and engagement</li><li>Review Meta Ads spend, CPC, CTR and leads</li><li>Share client-wise status update</li><li>Plan next week's content calendar</li></ul></article>
+      <article class="card"><h3>Monthly</h3><ul class="report-list"><li>Summarize reach, impressions and engagement</li><li>Review lead quality and conversions</li><li>Document case studies and business impact</li><li>Set next-month goals per brand</li></ul></article>
+    </div>
+  </section>
+
+
+  <section id="planner" class="section">
+    <div class="section-head"><div><h2>Content planning & publishing calendar</h2><p>Plan campaigns ahead, track approvals, and keep a clear publishing queue for every platform.</p></div><div class="actions"><button class="btn-light" id="exportCalendar">Export calendar CSV</button><button class="btn-light" id="plannerToday">Jump to today</button></div></div>
+    <div class="card" style="margin-bottom:15px">
+      <div class="week-strip" id="weekStrip"></div>
+      <div class="filters" style="margin:14px 0 0">
+        <div class="field"><label for="calendarStart">Week of</label><input type="date" id="calendarStart"></div>
+        <div class="field"><label for="calendarBrand">Brand</label><select id="calendarBrand"><option value="All">All brands</option><option>Time Global Tech</option><option>Legal Tech Pakistan</option><option>MoneyMinds Technologies Inc.</option><option>Orgpyur Technologies Inc.</option></select></div>
+        <div class="field"><label for="calendarPlatform">Platform</label><select id="calendarPlatform"><option value="All">All platforms</option><option>LinkedIn</option><option>Instagram</option><option>Facebook</option><option>YouTube</option><option>X</option><option>TikTok</option><option>Pinterest</option><option>Website</option></select></div>
+      </div>
+    </div>
+    <div class="planner-grid">
+      <article class="card">
+        <div class="section-head" style="margin:0 0 12px"><div><h2>Publishing queue</h2><p>Upcoming content in the selected week</p></div><span class="pill" id="calendarCount">0 items</span></div>
+        <div class="calendar-list" id="calendarList"></div>
+        <div class="empty" id="calendarEmpty" style="display:none">No planned content for this week. Add a calendar item to get started.</div>
+      </article>
+      <article class="card">
+        <h3 style="margin:0 0 12px" id="calendarFormHeading">＋ Plan content</h3>
+        <form id="calendarForm">
+          <div class="planner-form">
+            <div class="wide"><label for="calTitle">Content / campaign title *</label><input id="calTitle" required placeholder="e.g. AI services carousel"></div>
+            <div><label for="calBrand">Brand *</label><select id="calBrand"><option>Time Global Tech</option><option>Legal Tech Pakistan</option><option>MoneyMinds Technologies Inc.</option><option>Orgpyur Technologies Inc.</option></select></div>
+            <div><label for="calPlatform">Platform</label><select id="calPlatform"><option>LinkedIn</option><option>Instagram</option><option>Facebook</option><option>YouTube</option><option>X</option><option>TikTok</option><option>Pinterest</option><option>Website</option><option>Threads</option></select></div>
+            <div><label for="calDate">Publish date *</label><input id="calDate" type="date" required></div>
+            <div><label for="calTime">Publish time</label><input id="calTime" type="time" value="14:30"></div>
+            <div><label for="calType">Format</label><select id="calType"><option>Static post</option><option>Carousel</option><option>Short video / Reel</option><option>Story</option><option>Article</option><option>Blog</option><option>Campaign / ad</option><option>Other</option></select></div>
+            <div><label for="calStatus">Workflow status</label><select id="calStatus"><option>Idea</option><option>Drafting</option><option>Needs review</option><option>Approved</option><option>Scheduled</option><option>Published</option><option>Blocked</option></select></div>
+            <div><label for="calOwner">Owner / reviewer</label><input id="calOwner" placeholder="Name"></div>
+            <div class="wide"><label for="calCopy">Caption, brief or asset link</label><textarea id="calCopy" placeholder="Hook, CTA, key message, creative link, approval notes…"></textarea></div>
+          </div>
+          <div class="form-actions"><button class="btn-primary" type="submit" id="calendarSubmit">Save calendar item</button><button class="btn-light" type="reset" id="calendarReset">Clear</button></div>
+          <p class="hint">Planning records are stored in this browser. This does not publish to social platforms automatically.</p>
+        </form>
+      </article>
+    </div>
+    <div class="section-head"><div><h2>Pre-publish quality checklist</h2><p>Use before scheduling any content.</p></div></div>
+    <article class="card"><div class="grid three-col checklist">
+      <label><input type="checkbox"> Brand voice, spelling and facts checked</label>
+      <label><input type="checkbox"> Correct logo, dimensions and platform format</label>
+      <label><input type="checkbox"> CTA, hashtags and destination link verified</label>
+      <label><input type="checkbox"> Creative approved by reviewer / client</label>
+      <label><input type="checkbox"> Publish date and time confirmed</label>
+      <label><input type="checkbox"> UTM / tracking and campaign tags checked where relevant</label>
+    </div></article>
+  </section>
+
+  <section id="reports" class="section">
+    <div class="section-head"><div><h2>Daily, weekly & monthly reporting</h2><p>Reports are calculated from tasks currently recorded in this dashboard.</p></div><button class="btn-primary" id="downloadReport">Download report CSV</button></div>
+    <div class="grid report-grid">
+      <article class="card report-card"><h3>Daily summary</h3><p id="dailyLabel">Selected day</p><div class="report-num" id="dailyTasks">0 tasks</div><ul class="report-list" id="dailyList"></ul></article>
+      <article class="card report-card"><h3>Weekly summary</h3><p id="weeklyLabel">Selected week</p><div class="report-num" id="weeklyTasks">0 tasks</div><ul class="report-list" id="weeklyList"></ul></article>
+      <article class="card report-card"><h3>Monthly summary</h3><p id="monthlyLabel">Selected month</p><div class="report-num" id="monthlyTasks">0 tasks</div><ul class="report-list" id="monthlyList"></ul></article>
+    </div>
+    <div class="section-head"><div><h2>Performance KPIs</h2><p>Log performance separately by client and platform. MoneyMinds and Orgpyur activity uses the same shared LinkedIn account.</p></div></div>
+    <article class="card">
+      <form id="metricForm">
+        <div class="form-grid">
+          <div class="form-control"><label for="metricDate">Report date</label><input id="metricDate" type="date" required></div>
+          <div class="form-control"><label for="metricBrand">Brand / client</label><select id="metricBrand"><option>Time Global Tech</option><option>Legal Tech Pakistan</option><option>MoneyMinds Technologies Inc.</option><option>Orgpyur Technologies Inc.</option></select></div>
+          <div class="form-control"><label for="metricPlatform">Platform / account</label><select id="metricPlatform"><option>LinkedIn — shared account</option><option>Facebook</option><option>Instagram</option><option>Pinterest</option><option>YouTube</option><option>X</option><option>TikTok</option><option>Threads</option><option>Meta Ads</option><option>Website</option><option>Other</option></select></div>
+          <div class="form-control"><label for="metricReach">Reach</label><input id="metricReach" type="number" min="0" value="0"></div>
+          <div class="form-control"><label for="metricImpressions">Impressions</label><input id="metricImpressions" type="number" min="0" value="0"></div>
+          <div class="form-control"><label for="metricEngagements">Engagements</label><input id="metricEngagements" type="number" min="0" value="0"></div>
+          <div class="form-control"><label for="metricClicks">Clicks</label><input id="metricClicks" type="number" min="0" value="0"></div>
+          <div class="form-control"><label for="metricLeads">Leads</label><input id="metricLeads" type="number" min="0" value="0"></div>
+          <div class="form-control"><label for="metricConversions">Conversions / clients</label><input id="metricConversions" type="number" min="0" value="0"></div>
+          <div class="form-control"><label for="metricSpend">Ad spend (PKR)</label><input id="metricSpend" type="number" min="0" value="0"></div>
+          <div class="form-control"><label for="metricCpc">CPC (PKR, optional)</label><input id="metricCpc" type="number" min="0" step=".01" placeholder="Auto from spend/clicks if blank"></div>
+          <div class="form-control"><label for="metricCtr">CTR % (optional)</label><input id="metricCtr" type="number" min="0" step=".01" placeholder="Auto from clicks/impressions"></div>
+          <div class="form-control wide"><label for="metricNotes">Notes / learning</label><textarea id="metricNotes" placeholder="Best-performing content, lead quality, next optimization…"></textarea></div>
+        </div>
+        <div class="form-actions"><button class="btn-primary" type="submit">＋ Save KPI record</button></div>
+      </form>
+    </article>
+    <div class="section-head"><div><h2>Saved marketing metrics</h2><p>CTR = clicks ÷ impressions. CPC = ad spend ÷ clicks. Engagement rate shown as engagements ÷ impressions.</p></div></div>
+    <div class="table-wrap"><table class="data-table"><thead><tr><th>Date</th><th>Brand</th><th>Platform</th><th>Reach</th><th>Impressions</th><th>Engagements</th><th>Clicks</th><th>CTR</th><th>CPC</th><th>Leads</th><th>Conversions</th><th>Spend PKR</th><th>Actions</th></tr></thead><tbody id="metricTable"></tbody></table></div>
+  </section>
+
+  <section id="settings" class="section">
+    <div class="section-head"><div><h2>Settings & data management</h2><p>Control your workday assumptions and manage backups.</p></div></div>
+    <div class="grid two-col">
+      <article class="card"><h3 style="margin-top:0">Workday settings</h3><div class="form-grid">
+        <div class="form-control"><label for="workStart">Work starts</label><input id="workStart" type="time" value="11:00"></div>
+        <div class="form-control"><label for="workEnd">Work ends</label><input id="workEnd" type="time" value="17:00"></div>
+        <div class="form-control"><label for="breakStart">Break starts</label><input id="breakStart" type="time" value="13:30"></div>
+        <div class="form-control"><label for="breakEnd">Break ends</label><input id="breakEnd" type="time" value="14:30"></div>
+        <div class="form-control"><label for="weeklyGoal">Weekly task goal</label><input id="weeklyGoal" type="number" min="1" value="25"></div>
+        <div class="form-control"><label for="monthlyOutputGoal">Monthly output goal</label><input id="monthlyOutputGoal" type="number" min="1" value="80"></div>
+      </div><div class="form-actions"><button class="btn-primary" id="saveSettings">Save settings</button></div><p class="hint">Time range is a planning guide; you can still log actual task hours separately.</p></article>
+      <article class="card"><h3 style="margin-top:0">Backup & restore</h3><p class="muted">Export a JSON backup before clearing browser data or changing devices. Import a backup to restore tasks, KPI records and pipeline items.</p><div class="form-actions"><button class="btn-primary" id="backupBtn">Download full backup</button><label class="btn-light" for="restoreFile" style="display:inline-flex;align-items:center">Import backup JSON</label><input id="restoreFile" type="file" accept=".json,application/json" hidden><button class="btn-light" id="resetDemo">Load sample data</button></div><p class="hint">Data is saved locally in this browser using localStorage. It is not automatically shared with your employer or synced to other devices.</p></article>
+    </div>
+    <div class="section-head"><div><h2>How the dashboard calculates KPIs</h2><p>Transparent definitions for consistent reporting.</p></div></div>
+    <div class="card"><div class="mini-stat"><span>Completion rate</span><b>Completed tasks ÷ all tasks × 100</b></div><div class="mini-stat"><span>Hours logged</span><b>Sum of actual hours</b></div><div class="mini-stat"><span>Output volume</span><b>Sum of output counts</b></div><div class="mini-stat"><span>CTR</span><b>Clicks ÷ impressions × 100</b></div><div class="mini-stat"><span>CPC</span><b>Ad spend ÷ clicks</b></div><div class="mini-stat"><span>Engagement rate (impression-based)</span><b>Engagements ÷ impressions × 100</b></div><div class="mini-stat"><span>Lead conversion rate</span><b>Conversions ÷ leads × 100</b></div><p class="hint">Use the same metric definitions across platforms when comparing results. Platform-reported reach and engagement definitions may differ.</p></div>
+  </section>
+  <div class="footer"><span>WorkPulse · Akhtar Ali · Internal performance tracker</span><span>No performance results are pre-filled. Add your real tasks and metrics; sample pipeline items are editable.</span><span class="no-print">Local-first · Export backups regularly</span></div>
+</main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+(() => {
+const BRANDS=['Time Global Tech','Legal Tech Pakistan','MoneyMinds Technologies Inc.','Orgpyur Technologies Inc.'];
+const LINKEDIN_CLIENTS=['MoneyMinds Technologies Inc.','Orgpyur Technologies Inc.'];
+const PLATFORMS=['LinkedIn — shared account','Instagram','Facebook','Pinterest','YouTube','X','TikTok','Threads','Website','Internal / offline','Other'];
+const COLORS={'Time Global Tech':'#3157d5','Legal Tech Pakistan':'#0f9d8a','Orgpyur Technologies Inc.':'#7756c8','MoneyMinds Technologies Inc.':'#e58b32'};
+const $=id=>document.getElementById(id);
+const today=new Date(); const localDate=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const money=n=>'PKR '+Number(n||0).toLocaleString('en-PK',{maximumFractionDigits:0});
+const num=n=>Number(n||0);
+const fmt=n=>num(n).toLocaleString('en-PK',{maximumFractionDigits:2});
+const pct=(a,b)=>b?((a/b)*100):0;
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7);
+const defaults=()=>({tasks:[],metrics:[],calendar:[],projects:[
+{id:uid(),title:'Company profile development',brand:'Time Global Tech',stage:'Drafting',owner:'',due:'',notes:'Update services, positioning and proof points'},
+{id:uid(),title:'Case study pipeline',brand:'Time Global Tech',stage:'Backlog',owner:'',due:'',notes:'Collect outcomes, screenshots and client approval'},
+{id:uid(),title:'Women’s family legal support campaign review',brand:'Legal Tech Pakistan',stage:'In review',owner:'',due:'',notes:'Track qualified leads and client conversions'},
+{id:uid(),title:'Data governance content carousel',brand:'Orgpyur Technologies Inc.',stage:'Drafting',owner:'',due:'',notes:'Four-slide carousel; check brand style'},
+{id:uid(),title:'LinkedIn job-growth content plan',brand:'MoneyMinds Technologies Inc.',stage:'Backlog',owner:'',due:'',notes:'Plan weekly content and page-follow CTA'},
+{id:uid(),title:'LinkedIn hiring workflow',brand:'Orgpyur Technologies Inc.',stage:'Backlog',owner:'',due:'',notes:'Job post, applicant review, screening status and follow-up'}
+],settings:{start:'11:00',end:'17:00',breakStart:'13:30',breakEnd:'14:30',weeklyGoal:25,monthlyOutputGoal:80}});
+let state;
+try{state=JSON.parse(localStorage.getItem('workpulse-akhtar-v1'))||defaults()}catch(e){state=defaults()}
+if(!state.tasks)state.tasks=[];if(!state.metrics)state.metrics=[];if(!state.calendar)state.calendar=[];if(!state.projects)state.projects=[];if(!state.settings)state.settings=defaults().settings;
+const brandAliases={'Orgpyur':'Orgpyur Technologies Inc.','MoneyMinds':'MoneyMinds Technologies Inc.'};
+for(const collection of [state.tasks,state.metrics,state.projects]) collection.forEach(item=>{if(brandAliases[item.brand])item.brand=brandAliases[item.brand];});
+state.tasks.forEach(t=>{if(!t.platform)t.platform=(LINKEDIN_CLIENTS.includes(t.brand)?'LinkedIn — shared account':'Other');if(/case study/i.test(t.category||'')&&t.brand!=='Time Global Tech'){t.category='Research & strategy';t.notes=(t.notes? t.notes+' | ':'')+'Case study work is restricted to Time Global Tech.';}});
+state.projects.forEach(p=>{if(/case study/i.test(p.title||'')&&p.brand!=='Time Global Tech')p.brand='Time Global Tech';});
+let editTaskId=null;
+$('periodDate').value=localDate(today);$('taskDate').value=localDate(today);$('metricDate').value=localDate(today);
+function save(){localStorage.setItem('workpulse-akhtar-v1',JSON.stringify(state));render()}
+function toast(msg){$('toast').textContent=msg;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),2500)}
+function periodBounds(mode,dateStr){const d=new Date((dateStr||localDate(today))+'T12:00:00');let start,end;if(mode==='daily'){start=new Date(d);end=new Date(d)}else if(mode==='weekly'){start=new Date(d);let day=(start.getDay()+6)%7;start.setDate(start.getDate()-day);end=new Date(start);end.setDate(start.getDate()+6)}else{start=new Date(d.getFullYear(),d.getMonth(),1);end=new Date(d.getFullYear(),d.getMonth()+1,0)}return [localDate(start),localDate(end)]}
+function filteredTasks(modeOverride){const mode=modeOverride||$('periodMode').value,date=$('periodDate').value||localDate(today),brand=$('brandFilter').value,[start,end]=periodBounds(mode,date);return state.tasks.filter(t=>t.date>=start&&t.date<=end&&(brand==='All'||t.brand===brand))}
+function filteredMetrics(modeOverride){const mode=modeOverride||$('periodMode').value,date=$('periodDate').value||localDate(today),brand=$('brandFilter').value,[start,end]=periodBounds(mode,date);return state.metrics.filter(m=>m.date>=start&&m.date<=end&&(brand==='All'||m.brand===brand))}
+function statusClass(s){return s==='Completed'?'done':s==='In progress'?'progress':s==='Blocked'?'blocked':''}
+function statusPill(s){return `<span class="pill ${statusClass(s)}">${esc(s)}</span>`}
+function totals(tasks){return {all:tasks.length,done:tasks.filter(t=>t.status==='Completed').length,hours:tasks.reduce((a,t)=>a+num(t.actual),0),estimate:tasks.reduce((a,t)=>a+num(t.estimate),0),outputs:tasks.reduce((a,t)=>a+num(t.output),0),spend:tasks.reduce((a,t)=>a+num(t.spend),0)}}
+function brandStats(brand,tasks){const a=tasks.filter(t=>t.brand===brand),s=totals(a);return {...s,rate:pct(s.done,s.all)}}
+function timeMinutes(v){if(!v||!v.includes(':'))return 0;const [h,m]=v.split(':').map(Number);return h*60+m}
+function renderOverview(){
+ const tasks=filteredTasks(),s=totals(tasks),metrics=filteredMetrics();$('kpiCompleted').textContent=`${s.done}/${s.all}`;$('kpiCompletionFoot').textContent=`Completion rate: ${pct(s.done,s.all).toFixed(0)}%`;$('kpiHours').textContent=fmt(s.hours)+'h';$('kpiPlanned').textContent=fmt(Math.max(0,((timeMinutes($('workEnd').value)-timeMinutes($('workStart').value))-(Math.max(0,Math.min(timeMinutes($('workEnd').value),timeMinutes($('breakEnd').value))-Math.max(timeMinutes($('workStart').value),timeMinutes($('breakStart').value)))))/60))+'h/day';$('kpiPublished').textContent=s.outputs.toLocaleString();$('kpiSpend').textContent=money(s.spend+metrics.reduce((a,m)=>a+num(m.spend),0));
+ $('brandBars').innerHTML=BRANDS.map(b=>{let x=brandStats(b,tasks),width=x.all?pct(x.done,x.all):0;return `<div class="bar-row"><span>${esc(b)}</span><div class="track"><div class="fill" style="width:${width}%;background:${COLORS[b]}"></div></div><b>${x.done}/${x.all}</b></div>`}).join('');
+ const cat={};tasks.forEach(t=>cat[t.category]=(cat[t.category]||0)+num(t.actual));let cats=Object.entries(cat).sort((a,b)=>b[1]-a[1]);if(!cats.length)cats=[['No hours logged',0]];$('timeBreakdown').innerHTML=cats.slice(0,6).map(([name,h])=>`<div class="mini-stat"><span>${esc(name)}</span><b>${fmt(h)}h</b></div>`).join('')+`<div class="mini-stat"><span><b>Total actual hours</b></span><b>${fmt(s.hours)}h</b></div>`;
+ $('brandCards').innerHTML=BRANDS.map(b=>{let x=brandStats(b,tasks);return `<article class="card brand-card" style="--brand-color:${COLORS[b]}"><h3>${esc(b)}</h3><div class="big">${x.done}/${x.all}</div><small>tasks completed · ${x.rate.toFixed(0)}% completion</small><div class="progress-ring"><span style="width:${Math.min(100,x.rate)}%"></span></div><div class="brand-meta"><span>${fmt(x.hours)} hours</span><span>${x.outputs} outputs</span></div></article>`}).join('');
+ const open=tasks.filter(t=>t.status!=='Completed').sort((a,b)=>(a.due||'9999').localeCompare(b.due||'9999')).slice(0,8);$('priorityTable').innerHTML=open.length?open.map(t=>`<tr><td><b>${esc(t.title)}</b></td><td>${esc(t.brand)}</td><td>${esc(t.due||'—')}</td><td>${esc(t.priority)}</td><td>${statusPill(t.status)}</td><td>${fmt(t.actual)}h</td></tr>`).join(''):`<tr><td colspan="6" class="empty">No open tasks for this period. Add tasks to get started.</td></tr>`;
+}
+function renderTasks(){const list=filteredTasks().slice().sort((a,b)=>(b.date||'').localeCompare(a.date||''));$('taskTable').innerHTML=list.map(t=>`<tr><td><b>${esc(t.title)}</b><div class="muted">${esc(t.notes||'')}</div></td><td>${esc(t.brand)}</td><td>${esc(t.platform||'Other')}</td><td>${esc(t.category)}</td><td>${esc(t.date)}</td><td>${esc(t.due||'—')}</td><td>${esc(t.priority)}</td><td><select aria-label="Status" data-status="${t.id}">${['Not started','In progress','Completed','Blocked'].map(s=>`<option ${t.status===s?'selected':''}>${s}</option>`).join('')}</select></td><td>${fmt(t.estimate)}</td><td>${fmt(t.actual)}</td><td>${fmt(t.output)}</td><td>${money(t.spend)}</td><td><button class="btn-light" data-edit="${t.id}">Edit</button> <button class="btn-light delete-btn" data-delete="${t.id}">Delete</button></td></tr>`).join('');$('taskEmpty').style.display=list.length?'none':'block'}
+function renderClients(){const tasks=filteredTasks();$('clientCards').innerHTML=BRANDS.map(b=>{const s=brandStats(b,tasks);return `<article class="card brand-card" style="--brand-color:${COLORS[b]}"><h3>${esc(b)}</h3><div class="big">${s.all}</div><small>tasks recorded in period</small><div class="progress-ring"><span style="width:${Math.min(100,s.rate)}%"></span></div><div class="brand-meta"><span>${s.done} complete</span><span>${fmt(s.hours)}h</span></div></article>`}).join('');$('clientTable').innerHTML=BRANDS.map(b=>{let s=brandStats(b,tasks);return `<tr><td><b>${esc(b)}</b></td><td>${s.all}</td><td>${s.done}</td><td>${s.rate.toFixed(1)}%</td><td>${fmt(s.hours)}</td><td>${s.outputs}</td><td>${money(s.spend)}</td></tr>`}).join('')}
+function renderProjects(){$('projectTable').innerHTML=state.projects.map(p=>`<tr><td><input data-prop="title" data-id="${p.id}" value="${esc(p.title)}"></td><td><select data-prop="brand" data-id="${p.id}">${BRANDS.map(b=>`<option ${p.brand===b?'selected':''}>${b}</option>`).join('')}</select></td><td><select data-prop="stage" data-id="${p.id}">${['Backlog','Drafting','In review','Approved','Published','On hold'].map(s=>`<option ${p.stage===s?'selected':''}>${s}</option>`).join('')}</select></td><td><input data-prop="owner" data-id="${p.id}" value="${esc(p.owner||'')}" placeholder="Name"></td><td><input data-prop="due" data-id="${p.id}" type="date" value="${esc(p.due||'')}"></td><td><input data-prop="notes" data-id="${p.id}" value="${esc(p.notes||'')}"></td><td><button class="btn-light delete-btn" data-project-delete="${p.id}">Delete</button></td></tr>`).join('')}
+function renderMetrics(){const list=filteredMetrics().slice().sort((a,b)=>b.date.localeCompare(a.date));$('metricTable').innerHTML=list.map(m=>{let ctr=m.ctr!==''&&m.ctr!=null?num(m.ctr):pct(m.clicks,m.impressions),cpc=m.cpc!==''&&m.cpc!=null?num(m.cpc):(num(m.clicks)?num(m.spend)/num(m.clicks):0);return `<tr><td>${esc(m.date)}</td><td>${esc(m.brand)}</td><td>${esc(m.platform)}</td><td>${fmt(m.reach)}</td><td>${fmt(m.impressions)}</td><td>${fmt(m.engagements)}</td><td>${fmt(m.clicks)}</td><td>${ctr.toFixed(2)}%</td><td>${money(cpc)}</td><td>${fmt(m.leads)}</td><td>${fmt(m.conversions)}</td><td>${money(m.spend)}</td><td><button class="btn-light delete-btn" data-metric-delete="${m.id}">Delete</button></td></tr>`}).join('')}
+function reportFor(mode){const date=$('periodDate').value||localDate(today),[start,end]=periodBounds(mode,date),tasks=state.tasks.filter(t=>t.date>=start&&t.date<=end&&($('brandFilter').value==='All'||t.brand===$('brandFilter').value)),metrics=state.metrics.filter(m=>m.date>=start&&m.date<=end&&($('brandFilter').value==='All'||m.brand===$('brandFilter').value)),s=totals(tasks),ms={reach:metrics.reduce((a,m)=>a+num(m.reach),0),impressions:metrics.reduce((a,m)=>a+num(m.impressions),0),engagements:metrics.reduce((a,m)=>a+num(m.engagements),0),clicks:metrics.reduce((a,m)=>a+num(m.clicks),0),leads:metrics.reduce((a,m)=>a+num(m.leads),0),conversions:metrics.reduce((a,m)=>a+num(m.conversions),0),spend:metrics.reduce((a,m)=>a+num(m.spend),0)};return {start,end,tasks,metrics,s,ms}}
+function renderReports(){const d=reportFor('daily'),w=reportFor('weekly'),m=reportFor('monthly');$('dailyLabel').textContent=d.start;$('weeklyLabel').textContent=`${w.start} – ${w.end}`;$('monthlyLabel').textContent=new Date(m.start+'T12:00:00').toLocaleDateString('en',{month:'long',year:'numeric'});[['daily',d],['weekly',w],['monthly',m]].forEach(([key,r])=>{$(key+'Tasks').textContent=`${r.s.all} tasks`;$ (key+'List').innerHTML=`<li>Completed: <b>${r.s.done}</b> (${pct(r.s.done,r.s.all).toFixed(1)}%)</li><li>Hours logged: <b>${fmt(r.s.hours)}h</b></li><li>Outputs: <b>${r.s.outputs}</b></li><li>Ad spend in tasks: <b>${money(r.s.spend)}</b></li><li>Reach / impressions: <b>${fmt(r.ms.reach)} / ${fmt(r.ms.impressions)}</b></li><li>Engagements / clicks: <b>${fmt(r.ms.engagements)} / ${fmt(r.ms.clicks)}</b></li><li>Leads / conversions: <b>${fmt(r.ms.leads)} / ${fmt(r.ms.conversions)}</b></li><li>Spend in KPI records: <b>${money(r.ms.spend)}</b></li>`})}
+
+let editCalendarId=null;
+$('calendarStart').value=localDate(today);$('calDate').value=localDate(today);
+function calendarWeekStart(dateStr){const d=new Date((dateStr||localDate(today))+'T12:00:00');d.setDate(d.getDate()-((d.getDay()+6)%7));return d}
+function renderCalendar(){
+ const start=calendarWeekStart($('calendarStart').value), dates=[];
+ for(let i=0;i<7;i++){const d=new Date(start);d.setDate(start.getDate()+i);dates.push(localDate(d))}
+ $('weekStrip').innerHTML=dates.map((d,i)=>`<div class="week-day ${d===localDate(today)?'today':''}"><span>${['Mon','Tue','Wed','Thu','Fri','Sat','Sun'][i]}</span><strong>${Number(d.slice(-2))}</strong><span>${state.calendar.filter(x=>x.date===d).length} item(s)</span></div>`).join('');
+ const brand=$('calendarBrand').value,platform=$('calendarPlatform').value;
+ const items=state.calendar.filter(x=>x.date>=dates[0]&&x.date<=dates[6]&&(brand==='All'||x.brand===brand)&&(platform==='All'||(x.platform||'')===platform)).sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time));
+ $('calendarCount').textContent=`${items.length} item${items.length===1?'':'s'}`;
+ $('calendarList').innerHTML=items.map(x=>`<div class="calendar-item" style="border-left-color:${COLORS[x.brand]||'var(--blue)'}"><div><b>${esc(x.date)}</b><p>${esc(x.time||'Time TBD')}</p></div><div><h4>${esc(x.title)}</h4><p>${esc(x.brand)} · ${esc(x.platform)} · ${esc(x.type||'Content')}</p><div class="calendar-meta"><span class="badge-soft">${esc(x.status)}</span>${x.owner?`<span class="badge-soft">Owner: ${esc(x.owner)}</span>`:''}</div>${x.copy?`<p style="margin-top:7px">${esc(x.copy)}</p>`:''}</div><div style="display:flex;gap:6px;flex-wrap:wrap"><button class="btn-light" data-cal-edit="${x.id}">Edit</button><button class="btn-light delete-btn" data-cal-delete="${x.id}">Delete</button></div></div>`).join('');
+ $('calendarEmpty').style.display=items.length?'none':'block';
+}
+function resetCalendarForm(){editCalendarId=null;$('calendarForm').reset();$('calDate').value=$('calendarStart').value||localDate(today);$('calTime').value='14:30';$('calendarSubmit').textContent='Save calendar item';$('calendarFormHeading').textContent='＋ Plan content'}
+$('calendarForm').addEventListener('submit',e=>{e.preventDefault();const x={id:editCalendarId||uid(),title:$('calTitle').value.trim(),brand:$('calBrand').value,platform:$('calPlatform').value,date:$('calDate').value,time:$('calTime').value,type:$('calType').value,status:$('calStatus').value,owner:$('calOwner').value.trim(),copy:$('calCopy').value.trim()};if(!x.title||!x.date)return;if(editCalendarId)state.calendar=state.calendar.map(y=>y.id===editCalendarId?x:y);else state.calendar.push(x);$('calendarStart').value=x.date;save();resetCalendarForm();toast('Calendar item saved')});
+$('calendarReset').addEventListener('click',()=>setTimeout(resetCalendarForm,0));
+$('calendarList').addEventListener('click',e=>{const edit=e.target.dataset.calEdit,del=e.target.dataset.calDelete;if(edit){const x=state.calendar.find(y=>y.id===edit);if(!x)return;editCalendarId=x.id;for(const [k,v] of Object.entries({calTitle:x.title,calBrand:x.brand,calPlatform:x.platform,calDate:x.date,calTime:x.time,calType:x.type,calStatus:x.status,calOwner:x.owner,calCopy:x.copy}))$(k).value=v||'';$('calendarSubmit').textContent='Save changes';$('calendarFormHeading').textContent='Edit planned content';$('calendarForm').scrollIntoView({behavior:'smooth',block:'start'})}if(del&&confirm('Delete this planned content item?')){state.calendar=state.calendar.filter(y=>y.id!==del);save();toast('Calendar item deleted')}});
+['calendarStart','calendarBrand','calendarPlatform'].forEach(id=>$(id).addEventListener('change',renderCalendar));
+$('plannerToday').addEventListener('click',()=>{$('calendarStart').value=localDate(today);renderCalendar()});
+$('exportCalendar').addEventListener('click',()=>download('workpulse-content-calendar.csv',toCSV([['Title','Brand','Platform','Date','Time','Format','Status','Owner','Brief / link'],...state.calendar.map(x=>[x.title,x.brand,x.platform,x.date,x.time,x.type,x.status,x.owner,x.copy])])));
+
+function render(){renderOverview();renderTasks();renderClients();renderProjects();renderMetrics();renderReports();renderCalendar()}
+function resetTaskForm(){editTaskId=null;$('taskSubmit').textContent='＋ Save task';$('taskForm').reset();$('taskDate').value=$('periodDate').value||localDate(today);$('taskStart').value='11:00';$('taskEnd').value='12:00';$('taskEstimate').value=1;$('taskActual').value=0;$('taskOutput').value=0;$('taskSpend').value=0}
+$('taskForm').addEventListener('submit',e=>{e.preventDefault();let start=$('taskStart').value,end=$('taskEnd').value;const actual=num($('taskActual').value);if(start&&end&&end<start&&actual===0){toast('End time is earlier than start time. Check the time range.');return}let t={id:editTaskId||uid(),title:$('taskTitle').value.trim(),brand:$('taskBrand').value,platform:$('taskPlatform').value,category:$('taskCategory').value,date:$('taskDate').value,due:$('taskDue').value,priority:$('taskPriority').value,status:$('taskStatus').value,start,end,estimate:num($('taskEstimate').value),actual,output:num($('taskOutput').value),spend:num($('taskSpend').value),notes:$('taskNotes').value.trim()};if(!t.title)return;if(/case study/i.test(t.category)&&t.brand!=='Time Global Tech'){toast('Case studies can only be assigned to Time Global Tech.');return}if(editTaskId){state.tasks=state.tasks.map(x=>x.id===editTaskId?t:x)}else state.tasks.push(t);save();resetTaskForm();toast('Task saved successfully')});
+$('taskReset').addEventListener('click',()=>setTimeout(resetTaskForm,0));
+$('taskTable').addEventListener('change',e=>{const id=e.target.dataset.status;if(id){let t=state.tasks.find(t=>t.id===id);if(t){t.status=e.target.value;save();toast('Task status updated')}}});
+$('taskTable').addEventListener('click',e=>{const edit=e.target.dataset.edit,del=e.target.dataset.delete;if(edit){let t=state.tasks.find(t=>t.id===edit);if(!t)return;editTaskId=t.id;for(const [k,v] of Object.entries({taskTitle:t.title,taskBrand:t.brand,taskPlatform:t.platform||'Other',taskCategory:t.category,taskDate:t.date,taskDue:t.due,taskPriority:t.priority,taskStatus:t.status,taskStart:t.start,taskEnd:t.end,taskEstimate:t.estimate,taskActual:t.actual,taskOutput:t.output,taskSpend:t.spend,taskNotes:t.notes}))$(k).value=v??'';$('taskSubmit').textContent='Save changes';showSection('tasks');window.scrollTo({top:0,behavior:'smooth'})}if(del&&confirm('Delete this task?')){state.tasks=state.tasks.filter(t=>t.id!==del);save();toast('Task deleted')}});
+$('clearCompleted').addEventListener('click',()=>{const ids=new Set(filteredTasks().filter(t=>t.status==='Completed').map(t=>t.id));if(!ids.size){toast('No completed tasks in this filter');return}if(confirm(`Delete ${ids.size} completed task(s) in the selected period and brand filter?`)){state.tasks=state.tasks.filter(t=>!ids.has(t.id));save()}});
+$('metricForm').addEventListener('submit',e=>{e.preventDefault();const v=id=>$(id).value;state.metrics.push({id:uid(),date:v('metricDate'),brand:v('metricBrand'),platform:v('metricPlatform'),reach:num(v('metricReach')),impressions:num(v('metricImpressions')),engagements:num(v('metricEngagements')),clicks:num(v('metricClicks')),leads:num(v('metricLeads')),conversions:num(v('metricConversions')),spend:num(v('metricSpend')),cpc:v('metricCpc'),ctr:v('metricCtr'),notes:v('metricNotes')});save();e.target.reset();$('metricDate').value=$('periodDate').value||localDate(today);toast('KPI record saved')});
+$('metricTable').addEventListener('click',e=>{const id=e.target.dataset.metricDelete;if(id&&confirm('Delete this KPI record?')){state.metrics=state.metrics.filter(m=>m.id!==id);save()}});
+$('projectTable').addEventListener('change',e=>{const id=e.target.dataset.id,prop=e.target.dataset.prop;if(id&&prop){let p=state.projects.find(p=>p.id===id);if(p){if(prop==='brand'&&/case study/i.test(p.title)&&e.target.value!=='Time Global Tech'){toast('Case studies are reserved for Time Global Tech.');e.target.value='Time Global Tech';return}p[prop]=e.target.value;localStorage.setItem('workpulse-akhtar-v1',JSON.stringify(state));toast('Pipeline item updated')}}});
+$('projectTable').addEventListener('click',e=>{const id=e.target.dataset.projectDelete;if(id&&confirm('Delete this pipeline item?')){state.projects=state.projects.filter(p=>p.id!==id);save()}});
+$('addProject').addEventListener('click',()=>{state.projects.push({id:uid(),title:'New deliverable',brand:'Time Global Tech',stage:'Backlog',owner:'',due:'',notes:''});save()});
+function showSection(id){document.querySelectorAll('.section').forEach(s=>s.classList.toggle('active',s.id===id));document.querySelectorAll('.nav button').forEach(b=>b.classList.toggle('active',b.dataset.target===id));if(id==='tasks')$('taskTitle').focus({preventScroll:true});}
+document.querySelectorAll('.nav button').forEach(b=>b.addEventListener('click',()=>showSection(b.dataset.target)));
+document.querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click',()=>showSection(b.dataset.goto)));
+$('addTaskTop').addEventListener('click',()=>{showSection('tasks');$('taskTitle').focus()});
+['periodDate','periodMode','brandFilter'].forEach(id=>$(id).addEventListener('change',render));
+$('resetFilters').addEventListener('click',()=>{$('periodDate').value=localDate(today);$('periodMode').value='daily';$('brandFilter').value='All';render()});
+$('printBtn').addEventListener('click',()=>window.print());
+function csvCell(v){return '"'+String(v??'').replace(/"/g,'""')+'"'}
+function download(name,content,type='text/csv;charset=utf-8;'){const blob=new Blob([content],{type}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;a.click();URL.revokeObjectURL(url)}
+function toCSV(rows){return rows.map(r=>r.map(csvCell).join(',')).join('\r\n')}
+$('exportCsv').addEventListener('click',()=>{const rows=[['Title','Brand','Platform','Category','Date','Due','Priority','Status','Start','End','Estimated hours','Actual hours','Output count','Ad spend PKR','Notes'],...filteredTasks().map(t=>[t.title,t.brand,t.platform||'Other',t.category,t.date,t.due,t.priority,t.status,t.start,t.end,t.estimate,t.actual,t.output,t.spend,t.notes])];download('akhtar-tasks-'+localDate(today)+'.csv',toCSV(rows));});
+$('exportProjects').addEventListener('click',()=>download('akhtar-project-pipeline.csv',toCSV([['Title','Brand','Stage','Owner','Due','Notes'],...state.projects.map(p=>[p.title,p.brand,p.stage,p.owner,p.due,p.notes])])));
+$('downloadReport').addEventListener('click',()=>{const rows=[['Report','Period start','Period end','Brand filter','Tasks','Completed','Completion %','Hours','Outputs','Task spend PKR','Reach','Impressions','Engagements','Clicks','Leads','Conversions','KPI spend PKR']];['daily','weekly','monthly'].forEach(mode=>{let r=reportFor(mode);rows.push([mode,r.start,r.end,$('brandFilter').value,r.s.all,r.s.done,pct(r.s.done,r.s.all).toFixed(1),r.s.hours,r.s.outputs,r.s.spend,r.ms.reach,r.ms.impressions,r.ms.engagements,r.ms.clicks,r.ms.leads,r.ms.conversions,r.ms.spend])});download('akhtar-performance-report-'+localDate(today)+'.csv',toCSV(rows))});
+$('backupBtn').addEventListener('click',()=>download('workpulse-backup-'+localDate(today)+'.json',JSON.stringify(state,null,2),'application/json'));
+$('restoreFile').addEventListener('change',async e=>{const file=e.target.files[0];if(!file)return;try{const data=JSON.parse(await file.text());if(!Array.isArray(data.tasks)||!Array.isArray(data.metrics)||!Array.isArray(data.projects))throw Error('This does not look like a WorkPulse backup.');if(confirm('Replace current dashboard data with this backup?')){state=data;if(!state.calendar)state.calendar=[];save();toast('Backup restored')}}catch(err){alert('Could not import backup: '+err.message)}e.target.value=''});
+$('saveSettings').addEventListener('click',()=>{const start=$('workStart').value,end=$('workEnd').value;if(!start||!end||end<=start){toast('Please enter a valid work time range');return}const breakStart=$('breakStart').value,breakEnd=$('breakEnd').value;if((breakStart&&!breakEnd)||(!breakStart&&breakEnd)||(breakStart&&breakEnd&&breakEnd<=breakStart)){toast('Please enter a valid break time range');return}state.settings={start,end,breakStart,breakEnd,weeklyGoal:num($('weeklyGoal').value)||25,monthlyOutputGoal:num($('monthlyOutputGoal').value)||80};save();toast('Settings saved')});
+$('resetDemo').addEventListener('click',()=>{if(!confirm('Load sample tasks and metrics? This replaces current data. Download a backup first if needed.'))return;const d=localDate(today),y=new Date(today);y.setDate(y.getDate()-1);const yd=localDate(y);state=defaults();state.calendar=[{id:uid(),title:'Weekly value-led carousel',brand:'Time Global Tech',platform:'LinkedIn',date:d,time:'14:30',type:'Carousel',status:'Approved',owner:'',copy:'Sample item — replace with your actual content plan.'},{id:uid(),title:'Short-form product explainer',brand:'MoneyMinds Technologies Inc.',platform:'LinkedIn',date:yd,time:'16:00',type:'Short video / Reel',status:'Drafting',owner:'',copy:'Sample item — replace with your actual content plan.'}];state.tasks=[
+{id:uid(),title:'Research competitor content and trends',brand:'Time Global Tech',category:'Research & strategy',date:d,due:d,priority:'High',status:'Completed',start:'11:00',end:'12:00',estimate:1,actual:1,output:0,spend:0,notes:'Reviewed competitor posts and content gaps'},
+{id:uid(),title:'Create and schedule social posts',brand:'Time Global Tech',category:'Content creation & design',date:d,due:d,priority:'High',status:'In progress',start:'12:00',end:'14:00',estimate:2,actual:1.5,output:3,spend:0,notes:'Drafted captions and creative assets'},
+{id:uid(),title:'Review family-law campaign leads',brand:'Legal Tech Pakistan',category:'Paid media management',date:d,due:d,priority:'Urgent',status:'In progress',start:'14:00',end:'15:00',estimate:1,actual:1,output:0,spend:2500,notes:'Review qualified inquiries and follow-up process'},
+{id:uid(),title:'Draft data governance carousel',brand:'Orgpyur',category:'Content creation & design',date:yd,due:d,priority:'Medium',status:'Completed',start:'13:00',end:'14:30',estimate:1.5,actual:1.5,output:1,spend:0,notes:'Four-slide carousel draft ready for review'},
+{id:uid(),title:'Prepare job post variants',brand:'MoneyMinds',category:'Publishing & scheduling',date:d,due:d,priority:'Medium',status:'Not started',start:'15:00',end:'16:00',estimate:1,actual:0,output:0,spend:0,notes:'Plan three distinct job-post versions'}
+];state.metrics=[{id:uid(),date:d,brand:'Time Global Tech',platform:'LinkedIn',reach:1200,impressions:1800,engagements:95,clicks:32,leads:2,conversions:1,spend:0,cpc:'',ctr:'',notes:'Sample data only'},{id:uid(),date:d,brand:'Legal Tech Pakistan',platform:'Meta Ads',reach:950,impressions:1400,engagements:50,clicks:44,leads:8,conversions:1,spend:2500,cpc:'',ctr:'',notes:'Sample data only'}];save();toast('Sample data loaded — replace with actual figures')});
+$('workStart').value=state.settings.start||'11:00';$('workEnd').value=state.settings.end||'17:00';$('breakStart').value=state.settings.breakStart||'13:30';$('breakEnd').value=state.settings.breakEnd||'14:30';$('weeklyGoal').value=state.settings.weeklyGoal||25;$('monthlyOutputGoal').value=state.settings.monthlyOutputGoal||80;
+render();
+})();
+</script>
+</body>
+</html>
